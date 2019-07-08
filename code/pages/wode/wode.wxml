@@ -1,0 +1,91 @@
+<view class="wode_header">
+      <view class='wode_icon'>
+            <image mode="widthFix" src='{{userIcon}}'></image>
+      </view>
+      <view class='wode_info'>
+            <view class="info_name">{{userName}}</view>
+      </view>
+</view>
+<!-- 红包 -->
+<view class='hongbao'>
+      <view class='hb_item' style='border-right: 1px solid #ddd;'>
+            <view class='hb_count'><text>4</text>个</view>
+            <view class='hb_name'>红包</view>
+      </view>
+      <view class='hb_item'>
+            <view class='hb_count' style="color: rgb(106, 194, 11)"><text >4</text>个</view>
+            <view class='hb_name'>金币</view>
+      </view>
+</view>
+<!-- 红包 end-->
+<!-- 选项 -->
+<view class='select'>
+      <view class='select_item'>
+            <view class='select_icon'>
+                  <image mode="widthFix" src='../image/dizhi.png'></image>
+            </view>
+            <view class='select_title fl noborder'>
+                  我的地址
+                  <view class='jt fr'>
+                  </view>
+            </view>
+      </view>
+</view>
+<view class='select'>
+      <view class='select_item'>
+            <view class='select_icon'>
+                  <image mode="widthFix" src='../image/shangcheng.png'></image>
+            </view>
+            <view class='select_title fl'>
+                  金币商城
+                  <view class='jt fr'>
+                  </view>
+            </view>
+      </view>
+      <view class='select_item'>
+            <view class='select_icon'>
+                  <image mode="widthFix" src='../image/liwu.png'></image>
+            </view>
+            <view class='select_title fl noborder'>
+                  分享拿20元现金
+                  <view class='jt fr'>
+                  </view>
+            </view>
+      </view>
+</view>
+<view class='select'>
+      <view class='select_item'>
+            <view class='select_icon'>
+                  <image mode="widthFix" src='../image/kefy.png'></image>
+            </view>
+            <view class='select_title fl '>
+                  我的客服
+                  <view class='jt fr'>
+                  </view>
+            </view>
+      </view>
+      <view class='select_item'>
+            <view class='select_icon'>
+                  <image mode="widthFix" src='../image/shouye.png'></image>
+            </view>
+            <view class='select_title fl'>
+                  下载饿了么APP
+                  <view class='jt fr'>
+                  </view>
+            </view>
+      </view>
+      <view class='select_item'>
+            <view class='select_icon'>
+                  <image mode="widthFix" src='../image/dingdan.png'></image>
+            </view>
+            <view class='select_title fl noborder'>
+                  规则中心
+                  <view class='jt fr'>
+                  </view>
+            </view>
+      </view>
+</view>
+
+
+
+

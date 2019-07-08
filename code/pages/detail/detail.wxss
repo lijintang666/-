@@ -1,0 +1,371 @@
+/* pages/detail/detail.wxss */
+page{
+      background: #fafafa;
+}
+/* header */
+.detail_header{
+      width: 100%;
+      height: 250rpx;
+      padding: 40rpx;
+      background-image: linear-gradient(90deg,rgb(95, 181, 252),rgb(38, 137, 218));
+}
+.detail_header .dt_icon{
+      width: 120rpx;
+}
+.detail_header .dt_icon image{
+      width: 100%;
+}
+.detail_header .dt_con{
+      padding-left: 20rpx;
+      line-height: 50rpx;
+      font-size: 26rpx;
+      color: #fff; 
+}
+.detail_header .dt_con .dt_title{
+      font-size: 36rpx;
+      font-weight: 700;
+}
+.detail_header .dt_con .dt_title image{
+      width:60rpx;
+}
+/* category */
+.category_nav{
+      background: #fff;
+      width: 100%; 
+      height: 80rpx;
+      line-height: 80rpx;
+      text-align: center;
+      color:#666;
+      font-size:32rpx;
+      border-bottom: 1px solid #ccc;
+}
+.category_nav text{
+      padding: 0 80rpx;
+      display: inline-block;
+}
+.category_nav .active{
+      font-size:32rpx;
+      color: #333;
+      font-weight: 700;
+      border-bottom: 2px solid #008DFF;
+}
+
+/* header end*/
+.show{
+      display: block;
+}
+.hidden{
+      display: none;
+}
+/* 点餐 父盒子固定定位设置好宽高--左盒子定位top0left0,右盒子padding-left*/
+.diancan{
+width: 100%;
+position: fixed;
+top: 332rpx;
+bottom: 100rpx;
+z-index: -3;
+}
+.diancan .diancan_left{
+width: 200rpx;
+background: #f8f8f8;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+}
+.diancan .diancan_right{
+width: 100%;
+height: 100%;
+background: #fff;
+padding-left:200rpx; 
+}
+.diancan .diancan_footer{
+      width: 100%;
+      height: 100rpx;
+      position: fixed;
+      left: 0;
+      z-index: 999;
+      bottom: 0;
+      background-color: rgba(61,61,63,.9);
+}
+.diancan_left .menu_select{
+      height: 100%;
+      font-size: 28rpx;
+      color:#666;
+}
+.diancan_left .menu_select .menu_name{
+      width: 100%;
+      height: 80rpx;
+      text-align: center;
+      line-height: 80rpx;
+}
+/* 商品goods */
+.menu_con{
+      height: 100%;
+}
+.menu_item{
+      width: 100%;
+}
+.menu_item .menu_title{
+      padding-left: 20rpx;
+      font-size: 30rpx;
+      background: #f8f8f8;
+      height: 60rpx;
+      line-height: 60rpx;
+      color: #666;
+      font-weight: 700;
+}
+.menu_item .menu_title .menu_sm{
+      font-size: 28rpx;
+      color: #999;
+      font-weight: 0;
+}
+.menu_item .menu_goods{
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      font-size: 24rpx;
+      height: 200rpx;
+}
+.menu_item .menu_goods .goods_icon{
+      padding: 20rpx;
+      width: 200rpx;
+}
+.menu_item .menu_goods .goods_icon image{
+      width: 100%;
+}
+.menu_item .menu_goods .goods_detail {
+      color: #666;
+}
+.menu_item .menu_goods .goods_detail .goods_title{
+      font-size: 32rpx;
+      font-weight: 700;
+      color: #333;
+}
+.menu_item .menu_goods .goods_detail .goods_sellCount{
+      padding: 10rpx 0;
+}
+.menu_item .menu_goods .goods_detail .goods_price{
+      font-size: 32rpx;
+      color: rgb(255, 83, 57);
+}
+/* 加减 */
+.menu_goods .goods_control{
+overflow: hidden;
+text-align: center;
+line-height: 40rpx;
+font-size: 40rpx; 
+position: absolute;
+right: 20rpx;
+bottom: 40rpx;
+}
+.menu_goods .goods_control .reduce{
+      width: 40rpx;
+      height: 40rpx;
+      border-radius: 50%;
+      color: #008DFF;
+
+      border:1px solid #008DFF;
+}
+.menu_goods .goods_control .count{
+      padding: 0 20rpx;
+      font-size: 32rpx;
+}
+.menu_goods .goods_control .add{
+       width: 40rpx;
+      height: 40rpx;
+      color: #fff;
+      border-radius: 50%;
+      background:#008DFF;
+}
+/* 结算 */
+.dc_info{
+      padding-left: 200rpx;
+      color: #fff;
+      line-height: 100rpx;
+      position: relative;
+}
+.dc_info .dc_price{
+      font-size: 36rpx;
+}
+.dc_info .dc_js{
+      height: 100%;
+      
+}
+.dc_info .qisong{
+      font-size: 28rpx;
+      padding-right:20rpx; 
+}
+.dc_info .dc_js button{
+      height: 100rpx;
+      width: 250rpx;
+      border-radius: 0;
+      line-height: 100rpx;
+}
+.dc_info .dc_icon{
+      position: absolute;
+      top: -20rpx;
+      left: 60rpx;
+      border-radius: 50%;
+      width: 108rpx;
+      height: 108rpx;
+      background: #3190e8;
+      text-align: center;
+      line-height: 100rpx;
+      border: 8rpx solid #444;
+      
+}
+.dc_info .dc_icon image{
+      width: 60%;
+      vertical-align: middle;
+}
+.dc_info .dc_totalCount{
+      position: absolute;
+      top: -30rpx;
+      left: 130rpx;
+      width: 40rpx;
+      height: 40rpx;
+      border-radius: 50%;
+      background: linear-gradient(-90deg,#ff7416,#ff3c15 98%);
+      font-size: 26rpx;
+      text-align: center;
+      line-height: 40rpx;
+}
+/* 购物车 */
+.shopcart{
+      position: fixed;
+      width: 100%;
+      bottom: 100rpx;
+      left: 0;
+      background: #fff;
+}
+.shopcart .cart_title{
+      padding: 0 20rpx;
+      height: 80rpx;
+      line-height: 80rpx;
+      background: #eceff1;
+      font-size: 34rpx;
+      color: #666;
+}
+.shopcart .shopcart_item {
+      position: relative;
+      padding:0  20rpx;
+      height: 100rpx;
+      line-height: 100rpx;
+      color: #333;
+      font-size: 32rpx;
+      border-bottom: 2rpx solid #f8f8f8;
+}
+.shopcart .shopcart_item .sc_price {
+      position: absolute;
+      color:#ff5339;
+      line-height: 100rpx;
+      text-align: center;
+      top: 0;
+      left: 65%;
+
+}
+.shopcart_item .goods_control{
+      overflow: hidden;
+      text-align: center;
+      line-height: 40rpx;
+      font-size: 40rpx;
+      margin-top:30rpx; 
+}
+.shopcart_item .goods_control .reduce{
+      width: 40rpx;
+      height: 40rpx;
+      border-radius: 50%;
+      color: #008DFF;
+
+      border:1px solid #008DFF;
+}
+.shopcart_item .goods_control .count{
+      padding: 0 20rpx;
+      font-size: 30rpx;
+     
+      width: 70rpx;
+}
+.shopcart_item .goods_control .add{
+       width: 40rpx;
+      height: 40rpx;
+      color: #fff;
+      border-radius: 50%;
+      background:#008DFF;
+}
+/* 点餐 end*/
+.bg{
+      position: fixed;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      background: rgba(0,0,0,.4);
+      z-index: 1;
+}
+/* 评价 start */
+.pingjia {
+      width: 100%;
+      height: 200rpx;
+      padding: 0 20rpx;
+      font-size: 32rpx;
+      color: #555;
+      background: #fff;
+      
+}
+.pingjia .pingjia_rating {
+      display: flex;
+      text-align: center;
+
+      
+}
+.pingjia .pingjia_rating .rate{
+      line-height: 200rpx;
+      flex: 1;
+      font-size: 70rpx;
+      color: #ff6000;
+}
+.pingjia .pingjia_rating .sj_rate {
+      line-height: 200rpx;
+      flex: 2;
+}
+.pingjia .pingjia_rating  .wd{
+      flex: 1;
+      margin-top:50rpx; 
+      
+
+}
+.pingjia .pingjia_rating  .bz{
+      margin-top:50rpx; 
+      flex: 1;
+}
+.pingjia .pingjia_rating  .ps{
+      margin-top:50rpx; 
+      flex: 1;
+}
+/* 评价 end */
+/* 商家 */
+.shangjia{
+      
+}
+.shangjia .peisong_info{
+      height: 200rpx;
+      width: 100%;
+      background: #fff;
+      padding: 0 20rpx; 
+      font-size: 28rpx;
+      color: #555;
+      margin-bottom: 20rpx;
+}
+.shangjia .peisong_info .ps_title{
+      font-size: 34rpx;
+      font-weight: 700;
+      color: #333;
+      line-height:80rpx;
+      height: 80rpx;
+
+}
+.shangjia .peisong_info .ps_intro{
+      line-height:50rpx;
+      height: 50rpx;
+}
+/* 商家 end*/

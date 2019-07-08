@@ -1,0 +1,137 @@
+/* pages/faxian/faxian.wxss */
+page {
+      background: #fafafa;
+}
+/* 发现头部 */
+.faxian_header{
+      background: #fff;
+      height: 300rpx;
+      display: flex;
+      padding: 20rpx;
+}
+.faxian_header .fx_left{
+      flex: 1;
+      border-right:1px solid #ededed; 
+}
+.faxian_header .fx_right{
+      flex: 1;
+      padding-left:20rpx; 
+}
+.faxian_header .fx_right .fx_rt{
+      height: 130rpx;
+      border-bottom:1px solid #ededed; 
+
+}
+.faxian_header .fx_right .fx_rb{
+      height: 130rpx;
+
+}
+/* 头部项 */
+.fx_item {
+      width: 100%;
+      height: 130rpx;
+      color: #666;
+      line-height: 50rpx;
+      padding: 10rpx 0 0 20rpx;
+      position: relative;
+}
+
+.fx_item .fx_name{
+      color: rgb(255, 153, 0);
+      font-size: 36rpx;
+}
+
+.fx_item .fx_intro{
+      font-size: 28rpx;
+}
+.fx_item .fx_icon{
+      position: absolute;
+      right: 0;
+      top: 14rpx;
+      width: 90rpx;
+}
+.fx_item .fx_icon image{
+      width: 100%;
+}
+.fx_left .fx_item .fx_icon{
+      width: 126rpx;
+      right: 20rpx;
+}
+/* 推荐 */
+.recommend {
+      margin: 20rpx 0;
+      background: #fff;
+      overflow: hidden;
+}
+.recommend .recommend_title{
+      height: 100rpx;
+      text-align: center;
+}
+.recommend .recommend_title .rc_title{
+      height: 40rpx;
+      line-height: 40rpx;
+      font-size: 36rpx;
+      color: #333;
+      font-weight: 600;
+      margin-top: 40rpx;
+}
+.rc_title .line {
+      display: inline-block;
+      width: 50rpx;
+      background: #ccc;
+      height: 1px;
+      vertical-align: middle;
+}
+.recommend .rc_intro {
+      font-size: 28rpx;
+      color: #666;
+}
+/* 推荐商品 */
+.recommend_goods{
+      background: #fff;
+      padding: 0 10rpx;
+      font-size: 28rpx;
+}
+.recommend_goods .rc_goods_item{
+      padding: 10rpx;
+      float: left;
+      width: 50%;
+}
+.border{
+      border: 1px solid #eee;
+}
+.recommend_goods .rc_goods_item .gd_icon{
+      width: 100%;
+}
+.rc_goods_item .gd_icon image{
+      width: 100%;
+}
+.rc_goods_item .gd_title {
+      padding: 0 20rpx;
+      font-size: 34rpx;
+      color: #111;
+      font-weight: 700;
+
+}
+.rc_goods_item .gd_intro {
+      padding: 0 20rpx;
+      color: #666;
+}
+.rc_goods_item .gd_price {
+      margin: 0 20rpx;
+      color:#ff6000;
+      font-size: 32rpx;
+      border-bottom: 1px #ccc dashed;
+}
+.rc_goods_item .gd_sj {
+      padding: 0 20rpx;
+      height: 60rpx;
+      line-height: 60rpx;
+      color: #666;
+}
+
+
+
+
+
+/* 推荐 end*/

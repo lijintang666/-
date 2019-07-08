@@ -1,0 +1,128 @@
+<view class='shouye_contaniner'>
+<!-- 头部 -->
+<view class="search">
+       <view class="search_title">
+       神州路29号 <view class="jt"></view>
+       </view>
+       <view class="search_con">
+         <icon size="24rpx" type='search'></icon><text> 搜索饿了么商家、商品名称</text>
+       </view> 
+</view>
+<!-- 头部 end-->
+
+<!-- 分类 -->
+      <swiper   
+       duration= "500" class="mySwiper"
+         >
+        <block >
+          <swiper-item>
+            <view class="swiper-item">
+                  <!--  -->
+                  <view class="category">
+                        <view class='category_item' wx:for="{{categoryList}}" wx:key="index">
+                              <image mode="widthFix" src='{{item.imgs}}'></image>
+                              <view class="category_name">{{item.name}}</view>
+                        </view>
+                  </view>
+                  <!--  -->
+            </view>
+          </swiper-item>
+          <swiper-item>
+            <view class="category">
+                  <view class='category_item' wx:for="{{categoryListSencond}}" wx:key="index">
+                        <image mode="widthFix" src='{{item.imgs}}'></image>
+                        <view class="category_name">{{item.name}}</view>
+                  </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+
+<!-- 分类 -->
+<!-- 品质 -->
+<view class='quality'>
+      <view class='con'>
+            <view class="conF">品质套餐</view>
+            <view class="conS">搭配齐全吃的好</view>
+            <view class="conT">立即抢购 ></view>
+            <view class='con_bg'>
+                  <image mode="widthFix" src='../image/qianggou.webp'></image>
+            </view>
+      </view>
+</view>
+<!-- 品质 end-->
+<!-- 超级会员 -->
+<view class='members'>
+      <view class='member_icon'>
+             <image mode="widthFix" src='../image/members.webp'></image>
+      </view> 
+     <view class='members_con'>
+            <view class='member_textL'>
+                  <text class="chaoji">超级会员</text><view class='dian'></view> 每月领20元红包
+            </view>
+            <view class='member_textR'>
+                  立即开通 >
+            </view>
+      </view>
+</view>
+
+<!-- 超级会员end -->
+<!-- banner轮播图 -->
+<swiper indicatorDots="true"  autoplay='true' interval='2000'
+       duration= "500" class="banner_swiper"
+         >
+        <block >
+            <swiper-item wx:for="{{bannerList}}" wx:key="index">
+                        <view class="swiper-item banner_item">
+                              <image mode="widthFix" src='{{item}}'></image>
+                        </view>
+            </swiper-item>
+        </block>
+</swiper>
+<!-- banner轮播图 end-->
+
+<!-- title t推荐商家-->
+<view class="goods_title">
+      <view class='line'></view>
+      <view class="title">推荐商家</view> 
+      <view class='line'></view>
+</view>
+<!-- title end-->
+</view>
+<!-- category -->
+<view class="category_nav">
+      <text class="{{selected?'active':''}}" bindtap='selected'>综合排序</text>
+      <text class="{{selected1?'active':''}}" bindtap='selected1'>距离最近</text>
+      <text class="{{selected2?'active':''}}" bindtap='selected2'>品质联盟</text>
+      <text class="{{selected3?'active':''}}" bindtap='selected3'>筛选</text>
+</view>
+<!-- category end-->
+<!-- elm_shangjia -->
+<view class='shangjia' data-id="{{item.sj_id}}" bindtap='toDetails' wx:for="{{sjDataList}}" wx:key="index">
+      <view class='shangjia_icon fl'>
+            <image mode='widthFix' src="{{item.sj_slt}}"></image>
+      </view>
+      <view class='shangjia_con fl'>
+            <view class='sj_title'>{{item.sj_title}}</view>
+            <view class="sj_con">
+                  <text>{{item.sj_rate}}</text>
+                  <text>   {{item.sj_sellcount}}</text>
+            </view> 
+            <view class="sj_info"> 
+                  <text>{{item.sj_distance}}</text>|<text>{{item.sj_time}}</text>
+            </view>
+            <view class='sj_style'>{{item.sj_style}}</view>
+      </view>
+</view>
+<!-- 加载 -->
+<view class='load' wx:if="{{isLoading}}">
+            <image src='../image/jiazai.png' mode='widthFix'></image>
+            正在加载
+</view>
+<view class='load' wx:if="{{noHasLazyData}}">
+            没有更多的数据了
+</view>
+
+
+<!-- elm_shangjia end-->
+

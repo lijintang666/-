@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/index/index",
+
+    "pages/detail/detail",
+
+
+    "pages/pay/pay",
+    "pages/wode/wode",
+    "pages/faxian/faxian",
+    "pages/order/order",
+    "pages/logs/logs"
+  ],
+"window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#008DFF",
+      "navigationBarTitleText": "饿了吧",
+      "navigationBarTextStyle":"#fff"
+  },
+  
+  "tabBar": {
+      "color": "#999",
+      "selectedColor": "#0091FF",
+      "borderStyle": "ccc",
+      "backgroundColor": "#ffffff",
+      "list": [
+            {
+                  "pagePath": "pages/index/index",
+                  "iconPath": "pages/image/shouye1.png",
+                  "selectedIconPath": "pages/image/shouye.png",
+                  "text": "首页"
+            },
+            { 
+                  "pagePath": "pages/faxian/faxian",
+                  "iconPath": "pages/image/faxian1.png",
+                  "selectedIconPath": "pages/image/faxian.png",
+                  "text": "发现"
+            },
+            {
+                  "pagePath": "pages/order/order",
+                  "iconPath": "pages/image/dingdan1.png",
+                  "selectedIconPath": "pages/image/dingdan.png",
+                  "text": "订单"
+            },
+            { 
+                  "pagePath": "pages/wode/wode",
+                  "iconPath": "pages/image/wode1.png",
+                  "selectedIconPath": "pages/image/wode.png",
+                  "text": "我的"
+            }
+      ]
+}
+  
+}

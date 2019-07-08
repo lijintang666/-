@@ -1,0 +1,62 @@
+<!--pages/faxian/faxian.wxml-->
+<!-- 头部栏 -->
+ <view class='faxian_header'>
+            <view class='fx_left'>
+                  <view class='fx_item'>
+                        <view class='fx_name'>金币商城</view>
+                        <view class='fx_intro'>0元好物在这里</view>
+                  </view>
+                  <view class='fx_item'>
+                        <view class='fx_icon'>
+                              <image mode="widthFix" src='../image/fx01.webp'></image>
+                        </view>
+                  </view>
+
+            </view>
+            <view class='fx_right'>
+                  <view class='fx_rt fx_item'>
+                        <view class='fx_name' style='color: rgb(27, 169, 225)'>推荐有奖</view>
+                        <view class='fx_intro'>20元现金拿不停</view>
+                        <view class='fx_icon'>
+                              <image mode="widthFix" src='../image/fx02.webp'></image>
+                        </view>
+                  </view>
+                  <view class='fx_rb fx_item'>
+                        <view class='fx_name' style='color: rgb(237, 102, 96);'>周边优惠</view>
+                        <view class='fx_intro'>领取口碑好劵</view>
+                        <view class='fx_icon'>
+                              <image mode="widthFix" src='../image/fx03.webp'></image>
+                        </view>
+                  </view>
+            </view>
+            <!-- 1px solid #ededed -->
+ </view>
+<!-- 推荐栏 -->
+<view class='recommend'>
+      <view class='recommend_title'>
+            <view class='rc_title'>
+                  <view class='line'></view>
+                  为你推荐
+                  <view class='line'></view>
+            </view>
+            <view class='rc_intro'>你的口味,我都懂得</view>
+      </view>
+      <view class='recommend_goods'>
+            <view class='rc_goods_item' wx:for="{{faxianDataList}}" wx:key="index">
+                  <view class='border'>
+                        <view class='gd_icon'>
+                              <image mode='widthFix' src='{{item.sj_slt}}'></image>
+                        </view>
+                        <view class='gd_title'>{{item.sj_title}}</view>
+                        <view class='gd_intro'>
+                              <text>{{item.sj_sellcount}}</text>
+                              <text>{{item.sj_rate}}</text>
+                        </view>
+                        <view class='gd_price'>￥{{item.sj_rate}}</view>
+                        <view class='gd_sj'>{{item.sj_title}}</view>
+                  </view>
+            </view>
+            
+      </view>
+     
+</view>

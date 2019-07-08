@@ -1,0 +1,91 @@
+<!-- 支付地址 -->
+<view class='pay_address'>
+      <view class='ad_info'>订单配送至</view>
+      <view class='ad_con'>
+             广州天河城体育西路C出口
+            <view class='jt'></view>
+      </view>
+      <view class='ad_person'>
+            <text class='ad_name'>李金堂(先生)</text>
+            <text class='ad_number'>17688888888</text>
+      </view>
+</view>
+<!-- 送达时间 -->
+<view class='send_time'>
+      <view class='send'>
+            <view class='send_item'>
+                  <view class='send_icon'>
+                  </view>
+                  <view class='send_title fl '>
+                        <view class='send_con fl'>送达时间</view>
+                        <view class='send_now fr'>45分钟后(送达)</view>
+                        
+                        <view class='jt fr'></view>
+                  </view>
+            </view>
+            <view class='send_item'>
+                  <view class='send_icon'>
+                  </view>
+                  <view class='send_title fl noborder'>
+                        <view class='send_con fl'>支付方式</view>
+                        <view class='send_now fr'>在线支付</view>
+                  </view>
+            </view>
+      </view>
+</view>
+<!-- 下单商品 -->
+<view class='paygoods'>
+      <view class='paygoods_item '>
+            <view class='paygoods_icon icon_pd'>
+            </view>
+            <view class='paygoods_title fl item_addbig '>
+                  美洲汉堡玉树店
+                  
+            </view>
+      </view>
+       <view class='paygoods_item' wx:for="{{payDataList}}" wx:key="index">
+            <view class='paygoods_icon'>
+                  <image mode="widthFix" src='{{item.url}}'></image>
+            </view>
+            <!-- 遍历 -->
+            <view class='paygoods_title fl' >
+                        <view class='paygoods_name fl'>{{item.name}}</view>
+                        <view class='paygoods_count fl'>x{{item.count}}</view>
+                        <view class='paygoods_price fr'>￥<text class='price'>{{item.price*item.count}}</text> </view>
+            </view>
+            <!-- 遍历 -->
+      </view>
+      
+       <view class='paygoods_item '>
+            <view class='paygoods_icon'>
+                  <image mode="widthFix" src='../image/shangjiaxx.png'></image>
+            </view>
+            <view class='paygoods_title fl'>
+                  <view class='paygoods_name fl'>配送费</view>
+                  <view class='paygoods_price fr'>￥<text class='price'>0</text> </view>
+            </view>
+      </view>
+      <view class='paygoods_item '>
+            <view class='paygoods_icon icon_pd'>
+            </view>
+            <view class='paygoods_title fl' style='color:#ccc'>
+                  满减活动与折扣商品不同享
+            </view>
+      </view>
+       <view class='paygoods_item '>
+           
+            <view class='paygoods_title fl'>
+                        <view class='paygoods_icon icon_pd fl'></view>
+                        <view class='paygoods_name fl'>小计</view>
+                        <view class='xiaoji fr'>￥<text class='price'>{{totalPrice}}</text> </view>
+            </view>
+      </view>
+</view>
+<!--  -->
+<!-- 底部 -->
+<view class='pay_footer'>
+      <view class='ft_xiaoji'>￥{{totalPrice}}</view>
+      <view class='ft_topay' bindtap='toOrder'>
+            <button type="primary">去支付</button>
+      </view>
+</view>

@@ -1,0 +1,36 @@
+<view  class="order_container">
+      <view class="order_item" wx:for="{{orderDataList}}" wx:key="index">
+            <view class="order_header">
+                  <view class="od_icon">
+                        <image mode="widthFix" src="https://cube.elemecdn.com/b/5e/f3e49723be52fe9b43850c4330e52jpeg.jpeg?x-oss-process=image/resize,m_lfit,w_140,h_140/watermark,g_se,x_4,y_4,image_YS8xYS82OGRlYzVjYTE0YjU1ZjJlZmFhYmIxMjM4Y2ZkZXBuZy5wbmc_eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsUF8yOA%3D%3D/quality,q_90/format,webp"></image>
+                  </view>
+                  <view class="od_head">
+                        <view class="od_name fl">美洲汉堡
+                             <view class="od_time">{{item.time}}</view>
+                        </view>
+                        <view class="od_res fr">订单即将送达</view>
+                  </view>
+            </view>
+            <!-- 商品头 -->
+            <view class="order_header goods_header">
+                  <view class="od_icon">
+                  </view>
+                  <view class="od_head">
+                        <view class="od_name fl">{{item.firstGoods}}等{{item.count}}件商品
+                        </view>
+                        <view class="od_res fr">￥{{item.price}}</view>
+                  </view>
+            </view>
+            <!-- 操作 -->
+            <view class="od_control">
+                  <view class="again" bindtap='toDetails'>再来一单</view>
+            </view>
+             <view class="od_control">
+                  <view class="del" bindtap='delOrder' data-pos="{{index}}">删除订单</view>
+            </view>
+      </view>
+      
+      
+
+
+</view>

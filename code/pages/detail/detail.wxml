@@ -1,0 +1,135 @@
+      <!--头部  -->
+      <view class='detail_header'>
+            <view class='dt_icon fl'>
+                  <image mode='widthFix' src='../image/shangjia01.webp'></image>
+            </view> 
+            <view class='dt_con fl'>
+                  <view class='dt_title'><image mode="widthFix" src="../image/brand.png"></image> 华莱士 (元岗店)</view>
+                  <view class="dt_zs">蜂鸟专送/38分钟送达</view>
+                  <view class='dt_zf'><image style="width:30rpx" mode="widthFix" src="../image/jian.png"></image> 在线支付满28减5</view>
+            </view>
+      </view>
+      <!--头部  end-->
+
+      <!-- category -->
+      <view class="category_nav">
+            <text class="{{selected?'active':''}}" bindtap='selected'>点餐</text>
+            <text class="{{selected1?'active':''}}" bindtap='selected1'>评价</text>
+            <text class="{{selected2?'active':''}}" bindtap='selected2'>商家</text>
+      </view>
+      <!-- category end-->
+      <!-- diancan -->
+      <view class="{{selected?'show':'hidden'}} diancan">
+            <!-- 菜单选项 -->
+            <view class="diancan_left" >
+                  <scroll-view scroll-with-animation scroll-y class="menu_select" >
+                        <view bindtap='menu_select' data-index="{{index}}" class="menu_name" wx:for="{{detailDataList}}" wx:key="index">{{item.name}}</view>
+                       
+                  </scroll-view>
+            </view>
+            <!-- 菜单内容 -->
+            <view class="diancan_right"> 
+                  <scroll-view scroll-with-animation scroll-y='true' scroll-into-view="{{toView}}" class="menu_con">
+                        <!-- 商品内容 -->
+                        <view class='menu_item' wx:for="{{detailDataList}}" wx:for-index="parentIndex" wx:key="index" >
+                              <!-- scroll-to 到指定的 id -->
+                              <view class='menu_title' id="go{{parentIndex}}">{{item.name}} <text class="menu_sm">{{item.intro}}</text></view>
+                              <!--  -->
+                              <view class="menu_goods" wx:for="{{item.foods}}" wx:for-item="dtItem" wx:key="dtIndex" wx:for-index="dtIndex">
+                                    <view class='goods_icon fl'>
+                                          <image mode='widthFix' src='{{dtItem.url}}'></image>
+                                    </view>
+                                    <view class='goods_detail fl'>
+                                          <view  class='goods_title' >{{dtItem.name}}</view>
+
+                                          <view class='goods_sellCount'>
+                                                <text>月销{{dtItem.sellCount}}份 </text>
+                                                <text>好评率{{dtItem.rating}}% </text>
+                                          </view>
+                                          <view class="goods_price">￥{{dtItem.price}}</view>
+                                          <view class='goods_control fr'>
+                                               
+                                                <view class='add fl' bindtap='dtAdd' data-typeId="{{item.type}}" data-goodsId="{{dtIndex}}">+</view>
+                                          </view>
+                                    </view>
+                              </view>
+                        </view>
+                        
+                  </scroll-view>
+            </view> 
+            <!-- 底部栏 -->
+            <view class="diancan_footer" bindtap='toShopCar'>
+                  <view class='dc_info'>
+                        <view class='dc_price fl'>￥{{totalPrice}}</view>
+                        <!-- 结算 -->
+                        <view wx:if="{{isRulePriceFlag}}" class='dc_js fr' catchtap='toPay'>
+                              <button type="primary">去结算</button>
+                        </view>
+                        <!-- 起送 -->
+                        <view wx:if="{{!isRulePriceFlag}}" class='qisong fr' >
+                        还差￥{{remainPrice}}元起送
+                        </view>
+
+                        <view class='dc_icon'>
+                              <image mode="widthFix" src='../image/gouwuche01.png'></image>
+                        </view>
+                        <view class="dc_totalCount">{{totalCount}}</view>
+                  </view>
+            </view>
+            <!-- 购物车 -->
+            <view class='shopcart' wx:if="{{showShopCart}}">
+                  <view class='cart_title'>
+                        <div class='cart_selected fl'>已选商品</div>
+                        <div class='delAll fr' bindtap="delAll">清空</div>
+                  </view>
+                  <view class="shopcart_item" wx:for="{{shopcartList}}" wx:key="index">
+                        <view class="sc_name fl">{{item.name}}</view>
+                        <view class="sc_price fl">￥{{item.price}}</view>
+                        <view class='goods_control fr'>
+                              <view class='reduce fl'bindtap='scReduce' data-scid="{{index}}">-</view>
+                              <view class='count fl'>{{item.count}}</view>
+                              <view class='add fl' bindtap='scAdd' data-scid="{{index}}">+</view>
+                        </view>
+                  </view>
+                 
+            </view>
+          
+      </view>
+      <!-- diancan -->
+      
+      <!-- 评价 -->
+      <view class="{{selected1?'show':'hidden'}} pingjia">
+            <view class='pingjia_rating'>
+                  <view class='rate'>4.3</view>
+                  <view class='sj_rate'>商家评分</view>
+                  <view class='wd'>
+                        <view class='wd_title'>味道</view>
+                        <view class='wd_rate'>4.3</view>
+                  </view>
+                  <view class='bz'>
+                        <view class='bz_title'>包装</view>
+                        <view class='bz_rate'>4.3</view>
+                  </view>
+                  <view class='ps'>
+                        <view class='ps_title'>配送</view>
+                        <view class='ps_rate'>4.3</view>
+                  </view>
+                  
+            </view>
+      </view>
+      <!-- 评价 -->
+      <!-- 商家 -->
+      <view class="{{selected2?'show':'hidden'}} shangjia">
+            <view class='peisong_info'>
+                  <view class='ps_title'>配送信息</view>
+                  <view class='ps_intro'>由商家配送提供配送，约39分钟送达，距离143m</view>
+                  <view class='ps_intro'>配送费￥0</view>
+            </view>
+            <view class='peisong_info'>
+                  <view class='ps_title'>商家服务</view>
+                  <view class='ps_intro'>该商户食品安全已由国泰产险承担，食品安全有保障</view>
+            </view>
+      </view>
+      <!-- 商家 -->
+<!-- diancan end-->
+
